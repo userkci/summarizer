@@ -12,13 +12,13 @@ public class CSVFormatter implements ArticleFormatter {
 	
 	public String format(ArticleSummary article) {
 		StringBuilder buffer= new StringBuilder();
-		buffer.append(handleNull(article.getCompany()));
-		buffer.append(',');
-		buffer.append(handleNull(article.getCompanyURL()));
-		buffer.append(',');
 		buffer.append(article.getTitle());
 		buffer.append(',');
 		buffer.append(article.getUrl());
+		buffer.append(',');
+		buffer.append(handleNull(article.getCompany()));
+		buffer.append(',');
+		buffer.append(handleNull(article.getCompanyURL()));
 		return buffer.toString();
 	}
 

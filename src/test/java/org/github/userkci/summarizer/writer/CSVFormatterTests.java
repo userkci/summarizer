@@ -15,7 +15,7 @@ public class CSVFormatterTests {
 		
 		CSVFormatter formatter= new CSVFormatter();
 		String result= formatter.format(article);
-		String expected= "company name,company website,article title,article url";
+		String expected= "article title,article url,company name,company website";
 		Assert.assertEquals("Wrong value for missing company name", expected, result);
 	}
 	
@@ -27,7 +27,7 @@ public class CSVFormatterTests {
 		
 		CSVFormatter formatter= new CSVFormatter();
 		String result= formatter.format(article);
-		String expected= "n/a,company website,article title,article url";
+		String expected= "article title,article url,n/a,company website";
 		Assert.assertEquals("Wrong value for missing company name", expected, result);
 	}
 	
@@ -39,7 +39,7 @@ public class CSVFormatterTests {
 		
 		CSVFormatter formatter= new CSVFormatter();
 		String result= formatter.format(article);
-		String expected= "company name,n/a,article title,article url";
+		String expected= "article title,article url,company name,n/a";
 		Assert.assertEquals("Wrong value for missing company website", expected, result);
 	}
 
